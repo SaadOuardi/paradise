@@ -1,0 +1,817 @@
+/* ----------------------------- FONTS ----------------------------- */
+
+/* Bebas Neue */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* Oswald */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+/* ------------------------ VARRIABLES ------------------------- */
+
+:root{
+
+    /* ---------- LIGHT MODE ---------- */
+
+        /* ---------- SECTIONS : BG-COLORS ---------- */
+        --header--bgColor-LM: #c4c4c4;
+        --section--bgColor-LM: rgb(76, 27, 0);
+        --footer--bgColor-LM: #c4c4c4;
+
+        /* ---------- SECTIONS : COLORS  ---------- */
+        --header--Color-LM: rgb(11, 11, 11);
+        --section--Color-LM: rgb(255, 252, 252);
+        --footer--Color-LM: rgb(11, 11, 11);
+
+        /* ---------- ELEMENT ----------*/
+        --primary-element--bgColor-LM: rgb(93, 38, 38);
+        --primary-element--Color-LM: rgb(255, 252, 252);
+
+        --secondary-element--bgColor-LM: rgb(255, 170, 0);
+        --secondary-element--Color-LM: rgb(11, 11, 11);
+
+        /* ---------- ELEMENT ON HOVER----------*/
+        --primary-hover-element--bgColor-LM: rgb(101, 52, 52);
+        --secondary-hover-element--bgColor-LM: rgb(255, 198, 84);
+        
+    /* ---------- DARK MODE ---------- */
+
+        /* ---------- SECTIONS : BG-COLORS ---------- */
+        --header--bgColor-DM: rgb(11, 11, 11);
+        --section--bgColor-DM: rgb(255, 199, 103);
+        --footer--bgColor-DM: rgb(11, 11, 11);
+
+        /* ---------- SECTIONS : COLORS  ---------- */
+        --header--Color-DM: rgb(255, 252, 252);
+        --section--Color-DM: rgb(11, 11, 11);
+        --footer--Color-DM: rgb(255, 252, 252);
+
+        /* ---------- ELEMENT ----------*/
+        --primary-element--bgColor-DM: rgb(14, 114, 255);
+        --primary-element--Color-DM: rgb(255, 252, 252);
+
+        --secondary-element--bgColor-DM: rgb(255, 199, 103);
+        --secondary-element--Color-DM: rgb(11, 11, 11);
+
+    
+    /* -------------------- FONTS -------------------- */
+
+        /* ------ FONT-SIZE ------ */
+        --primary--font-size: 100px;
+        --secondary--font-size: 20px;
+
+        --button--font-size: 15px;
+        --link-font-size: 15px;
+        --list--font-size: 15px;
+
+        /* ------ FONT-FAMILY ------ */
+        --primary--font-family: "Bebas Neue", sans-serif;
+        --secondary--font-family: "Oswald", sans-serif;;
+        --font-family: "";
+
+        /* ------ FONT-WEIGHT ------ */
+        --primary--font-weight: 800;
+        --secondary--font-weight: 600;
+        --font-weight: 400;
+    }
+
+/* ------------------------ INITIALISATION ------------------------- */
+/* 
+
+font-weight: var(--primary--font-weight);
+
+font-size: var(--secondary--font-size);
+
+font-weight: var(--secondary--font-weight); */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--secondary--font-family);
+}
+
+/* --------- IMAGES  ---------- */
+img{
+    width: 100px;
+    height: 100px;
+    border-radius: 9px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+img:hover{
+    cursor: pointer;
+}
+
+/* --------- BUTTON  ---------- */
+button{
+    height: 40px;
+    width: fit-content;
+    background-color: rgb(0, 123, 255);
+    color: white;
+    /* box-shadow: 1px 1px 8px white; */
+    border: none;
+    border-radius: 4px;
+    padding: 2px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+button:hover{
+    background-color: var(--primary-hover-element--bgColor-LM);
+    transform: translateY(-0.2rem);
+}
+
+/* --------- FORM  ---------- */
+
+form{
+    height: fit-content;
+    width: fit-content;
+    background-color: transparent;
+    box-shadow: rgb(131, 131, 131) 2px 2px 8px;
+    padding: 40px 10px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+
+}
+/* --------- INPUT  ---------- */
+
+input{
+    height: 40px;
+    width: 300px;
+    background-color: rgb(66, 66, 66);
+    color: white;
+    outline:none;
+    border: none;
+    border-radius: 25px;
+    padding-left: 50px;
+}
+
+/* --------- SVG-ICON  ---------- */
+.bi{
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+.bi:hover{
+    color: gold;
+}
+
+/* ----------------------- */
+header{
+    height: fit-content;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    /* position: sticky;
+    top: 0;
+    z-index: 200; */
+}
+
+section{
+    background-color: black;
+    color: var(--section--Color-LM);
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    gap: 20px;
+}
+
+footer{
+    background-color: var(--footer--bgColor-LM);
+    color: var(--footer--Color-LM);
+}
+
+/* ---------------------------- HEADER ----------------------------- */
+.header{
+    background-color: transparent;
+    /* background-color: var(--header--bgColor-LM); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+/* ------------- RESTAURANT DATA ------------- */
+.restaurant-data__container{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding: 2px;
+    gap: 5px;
+}
+.restaurant__img{
+    height: 60px;
+    width: 60px;
+}
+.restaurant__name_container{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+.restaurant__name{
+    font-size: 30px;
+}
+
+.restaurant__type{
+    font-size: 15px;
+}
+
+/* ------------- NAVBAR ------------- */
+
+.nav__bar_container{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+    font-family: var(--primary--font-family);
+    font-weight: var(--primary--font-weight);
+}
+.nav__bar_container a{
+    text-decoration: none;
+    padding: 5px 20px;
+    color: white;
+}
+.nav__bar_container a:hover{
+    color:gold;
+}
+
+
+/* ICONS */
+.icons_conatiner{
+    height: 50px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.icons_conatiner svg{
+    height: 30px;
+    width: 30px;
+}
+
+
+/* ----------------------------- MAIN ------------------------------ */
+
+.section__title_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 10px;
+}
+.section__title{
+    font-size: var( --primary--font-size);
+    font-family: var(--primary--font-family);
+    font-weight: var(--primary--font-weight);
+    color: gold;
+    text-shadow: 2px 2px 5px black;
+}
+.section__description{
+    font-size: var( --secondary--font-size);
+    font-family: var(--secondary--font-family);
+    font-weight: var(--secondary--font-weight);
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 5px black;
+    text-align: center;
+}
+.section__img{
+    height: 100px;
+    width: 100px;
+}
+
+/* --------------------- SECTION 1 : SLIDER  ----------------------- */
+.main__slider{
+    background-image: url(../IMG/covers/cover-1.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: fit-content;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px 0;
+}
+.slider__content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 10px 0;
+}
+
+/* ------ SLIDER ICONS ------ */
+.main__slider svg{
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.main__slider svg:hover{
+    color: gold;
+}
+
+/* ------ SLIDER DATA ------ */
+.slider__data{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ------ SLIDER CIRCLES ------ */
+.pagination-dots_container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.pagination{
+    height: 20px;
+    width: 20px;
+    background-color: whitesmoke;
+    border: 2px solid black;
+    border-radius: 100%;
+}
+
+.active__pagination{
+    height: 15px;
+    width: 40px;
+    background-color: black;
+    border: 2px solid whitesmoke;
+    border-radius: 20px;
+}
+
+/* ------------------ SECTION 2 : SPECIAL DISHES  ------------------ */
+
+.special-dishes__section{
+    background-color: black;
+}
+.main-dish__container{
+    background-color: black;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    background-color: black;
+}
+
+.dish-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.dish-card{
+    height:fit-content;
+    width: 150px;
+    padding: 20px 20px;
+    background-color: rgb(43, 43, 43);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    border-radius: 9px;
+    transition: all 0.4s linear;
+}
+
+.dish-card:hover{
+    transform: translateY(-0.3rem);
+    box-shadow: 2px 2px 10px rgb(121, 121, 121);
+
+}
+
+.dish-card .dish__img{
+    width: 100%;
+    height: 150px;
+}
+.dish__name{
+    color: gold;
+}
+.dish__price{
+    color: gold;
+}
+.dish__description{
+    font-size: 10px;
+    text-align: center;
+}
+
+
+
+/* --------------------- SECTION 3 : EXPERIENCE  ------------------- */
+.experience__section{
+    background-image: url(../IMG/background/bg-1.avif);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding:10px 0;
+    gap: 20px;
+}
+
+.experience__leftside_container{
+    width: clamp(100%, 0, 100%);
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.experience__rightside_container{
+    height: 350px;
+    width: clamp(100%, 0, 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    
+}
+
+.experience__leftside_container .special-dish__img{
+    width: 300px;
+    height: 100%;
+}
+.experience__section img{
+    width: 50px;
+    height: 50px;
+}
+
+.experience__section h1{
+    font-size: 40px;
+}
+.experience__section p{
+    font-size: 10px;
+    text-align: start;
+}
+
+
+.experience__icons_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.experience__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+/* ------------------ SECTION 4 : BOOK A TABLE  -------------------- */
+
+.book-table__section{
+    background-image: url(../IMG/covers/cover-1.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.book-table__section .section__title_container{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    margin-right: 400px;
+}
+
+.book-table__section .section__title_container h1{
+    font-size: 40px;
+}
+
+
+/* ------------------ SECTION 5 : CHEFS  ------------------ */
+section.chef__section{
+    background-color: black;
+    height: fit-content;
+}
+.chef-list__container{
+    background-color: black;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    gap: 15px;
+}
+
+.chef-card{
+    background-color: transparent;
+    box-shadow: 2px 2px 5px gold;
+    height: 300px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-shrink: 0;
+    padding: 10px;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+.chef__img{
+    height: 80%;
+    width: 90%;
+}
+
+/* ------------------ SECTION 6 : MENU  ------------------ */
+.menu__section{
+    background-image: url(../IMG/background/bg-s1.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-color: rgb(55, 55, 55);
+}
+.menu-content_container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.menu-filter_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+
+/* ------------------ SECTION 7 : GALLERY  ------------------ */
+.gallery__section{
+    background-color: black;
+}
+
+.gallery__list_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    /* width: calmp(10px,10px,10px); */
+    width: 100%;
+}
+
+.gallery__item{
+    width: 400px;
+    height: 300px;
+    border-radius: 0;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.gallery__item:hover{
+    filter:blur(2px);
+    -webkit-filter:blur(2px);
+}
+
+/* ------------------ SECTION 8 : FORM : BOOK A TABLE  ------------------ */
+.form_book-table__section{
+    background-image: url(../IMG/background/bg-s1.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.contact__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.input__container{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input__container svg{
+    position: absolute;
+    left: 20px;
+    top: 10px;
+
+    height: 25px;
+    width: 25px;
+}
+.input__container svg:hover{
+    color: white;
+}
+
+input[type="submit"]{
+    background-color: rgb(0, 115, 255);
+    padding-left: 0;
+    width: calc(100% + 50px);
+    cursor: pointer;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator{
+    position: absolute;
+    left: 15px;
+    top: 7px;
+    height: 25px;
+    width: 25px;
+    filter: invert(100%);
+    cursor: pointer;
+}
+input[type="time"]::-webkit-calendar-picker-indicator{
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    height: 30px;
+    width: 30px;
+    filter: invert(100%);
+    cursor: pointer;
+}
+
+.main-schedule_container{
+    background-color: black;
+    height: 335px;
+    width: 350px ;
+    border-radius: 9px;
+    box-shadow: 2px 2px 10px rgb(125, 125, 125);
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    justify-content: center;
+    padding: 30px 10px;
+    gap: 10px;
+}
+
+.schedule-list_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+}
+.schedule{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+hr{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 2px;
+}
+
+/* ------------------ SECTION 9 : CONTACTS  ------------------ */
+
+.contact-list_container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.contact-card_container{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.contact-card_container:hover{
+    transform: translateY(-0.5rem);
+}
+
+.contact-card_container a{
+    width: 100%;
+    text-decoration: none;
+}
+.contact-card{
+    background-color: gold;
+    color: black;
+    padding: 5px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.contact-card .bi:hover{
+    color: black;
+}
+
+.contact-details__container{
+    background-color: #c4c4c4;
+    color: black;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ----------------------------- FOOTER ----------------------------- */
+
+
+
+
+
+
+.more-menu__container{
+    display: none;
+}
+/* MOBILE VERSION */
+
+@media screen and (max-width :995px) {
+    .nav__bar_container,.icons_conatiner,.contact-us-btn__container,
+    .slider__content .bi{
+        display: none;
+    }
+    .more-menu__container{
+        display: block;
+    }
+    .header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+    .slider__data,.slider__content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+
+
+
+/* .more-menu__container{
+    display: none;
+} */
